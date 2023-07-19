@@ -1,3 +1,17 @@
 .contents-wrap {
-    width: 1000px;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.excerisename {
+    width: 400px;
+}
+
+
+
+.graph-area {
+    width: 500px;
 }
