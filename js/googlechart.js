@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded",
     }
 
 
-// fetch()が鍵　Javascriptの関数？らしい
+    // fetch()が鍵　Javascriptの関数？らしい
 
 
 
