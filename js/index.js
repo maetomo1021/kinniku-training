@@ -1,3 +1,5 @@
+var test = "";
+
 
 /* 日にち、曜日の取得 */
 window.addEventListener("DOMContentLoaded", function () {
@@ -48,3 +50,18 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
+
+
+window.addEventListener("DOMContentLoaded", function () {
+    const browserName = navigator.appName;
+    const browserVersion = navigator.appVersion;
+    const osName = navigator.platform;
+    
+    console.log("ブラウザ名: " + browserName);
+    console.log("ブラウザバージョン: " + browserVersion);
+    console.log("OS名: " + osName);
+    // location.href = "https://www.google.co.jp/maps/place/35%C2%B041'29.5%22N+139%C2%B041'48.3%22E/@35.6915291,139.6941813"
+    
+
+})
