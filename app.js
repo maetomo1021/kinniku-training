@@ -1,7 +1,10 @@
+// app.js
+
 const express = require('express');
 const sqlite3 = require('sqlite3');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
+const Chart = require('chart.js'); // Chart.jsを追加
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -26,7 +29,20 @@ app.get('/', (req, res) => {
             res.status(500).send('Internal Server Error');
             return;
         }
-        res.render('index', { records });
+        // グラフのデータを作成
+        const exerciseData = {};
+        records.forEach(record => {
+            const { exercise, weight, reps } = record;
+            if (!exerciseData[exercise]) {
+                exerciseData[exercise] = {
+                    weights: [],
+                    reps: [],
+                };
+            }
+            exerciseData[exercise].weights.push(weight);
+            exerciseData[exercise].reps.push(reps);
+        });
+        res.render('index', { records, exerciseData });
     });
 });
 
