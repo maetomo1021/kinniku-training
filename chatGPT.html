@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Tracker</title>
     <link rel="stylesheet" href="/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+
 </head>
 
 <body>
@@ -54,6 +57,40 @@
             </tr>
             <% }); %>
     </table>
+
+
+    <!-- views/index.ejs -->
+
+    <!-- グラフの表示領域を追加 -->
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script>
+        // グラフ描画用のJavaScriptを追加
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const exerciseData = <%= JSON.stringify(exerciseData) %>;
+    
+        // グラフのデータ
+        const data = {
+            labels: Object.keys(exerciseData),
+            datasets: Object.keys(exerciseData).map(exercise => ({
+                label: exercise,
+                data: exerciseData[exercise].weights,
+                borderColor: `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`,
+                borderWidth: 2,
+                fill: false,
+            })),
+        };
+    
+        const config = {
+            type: 'line',
+            data: data,
+        };
+    
+        const myChart = new Chart(ctx, config);
+    </script>
+
+
+
 </body>
 
 </html>

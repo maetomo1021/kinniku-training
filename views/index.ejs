@@ -18,6 +18,10 @@
         <select name="exercise" id="exercise">
             <option value="チェストプレス">チェストプレス</option>
             <option value="ラットプルダウン">ラットプルダウン</option>
+            <option value="ショルダープレス">ショルダープレス</option>
+            <option value="レッグエクステンション">レッグエクステンション</option>
+            <option value="ハックスクワット">ハックスクワット</option>
+            <option value="インクラインプレス">インクラインプレス</option>
         </select>
         <br>
         <label for="weight">重量（kg）:</label>
@@ -64,7 +68,7 @@
         // グラフ描画用のJavaScriptを追加
         const ctx = document.getElementById('myChart').getContext('2d');
         const exerciseData = <%= JSON.stringify(exerciseData) %>;
-
+    
         // グラフのデータ
         const data = {
             labels: Object.keys(exerciseData),
@@ -76,15 +80,14 @@
                 fill: false,
             })),
         };
-
+    
         const config = {
             type: 'line',
             data: data,
         };
-
+    
         const myChart = new Chart(ctx, config);
     </script>
-
 
 
 
