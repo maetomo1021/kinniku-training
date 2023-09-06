@@ -1,4 +1,7 @@
 var test = "";
+var syozaiti = document.getElementById("itizyouhou");
+var kizaizyouhou = document.getElementById("tanmatu");
+// Syozaiti.innerHTML ="dadada";
 
 
 /* 日にち、曜日の取得 */
@@ -52,7 +55,7 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
+/* 端末情報の取得 */
 window.addEventListener("DOMContentLoaded", function () {
     const browserName = navigator.appName;
     const browserVersion = navigator.appVersion;
@@ -62,6 +65,8 @@ window.addEventListener("DOMContentLoaded", function () {
     console.log("ブラウザバージョン: " + browserVersion);
     console.log("OS名: " + osName);
     // location.href = "https://www.google.co.jp/maps/place/35%C2%B041'29.5%22N+139%C2%B041'48.3%22E/@35.6915291,139.6941813"
-    
+    console.log("111111111111111111111111")
+    console.log(syozaiti)
+    console.log(kizaizyouhou)
 
 })

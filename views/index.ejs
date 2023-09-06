@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Tracker</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Gym Tracker</h1>
+    <form action="/record" method="post">
+        <label for="exercise">トレーニング種目:</label>
+        <select name="exercise" id="exercise">
+            <option value="チェストプレス">チェストプレス</option>
+            <option value="ラットプルダウン">ラットプルダウン</option>
+        </select>
+        <br>
+        <label for="weight">重量（kg）:</label>
+        <input type="text" name="weight" id="weight">
+        <br>
+        <label for="reps">回数:</label>
+        <input type="text" name="reps" id="reps">
+        <br>
+        <input type="submit" value="記録する">
+    </form>
+    <h2>記録一覧</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>トレーニング種目</th>
+            <th>重量（kg）</th>
+            <th>回数</th>
+        </tr>
+        <% records.forEach((record) => { %>
+            <tr>
+                <td><%= record.id %></td>
+                <td><%= record.exercise %></td>
+                <td><%= record.weight %></td>
+                <td><%= record.reps %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>

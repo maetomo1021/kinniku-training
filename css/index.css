@@ -1,5 +1,22 @@
 body {
-    width: 600px;
     margin: auto;
     text-align: center;
 }
+
+
+.contents-wrap {
+    text-align: center;
+    background-color: rgb(219, 219, 180);
+
+}
+
+
+
+
+.cancas-box {
+    border: solid 3px rgb(231, 36, 36);
+
+}
+
+
+
