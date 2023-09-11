@@ -5,6 +5,8 @@ const sqlite3 = require('sqlite3');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const Chart = require('chart.js'); // Chart.jsを追加
+const a = 0
+
 
 const app = express();
 const port = process.env.PORT || 3000;
