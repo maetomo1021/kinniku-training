@@ -14,6 +14,14 @@ window.addEventListener("DOMContentLoaded", function () {
     // console.log(Hiniti)
     const Nengappi = (year + "年" + month + "月" + date + "日" + "(" + weekday[day] + ")")
 
+
+    var today = new Date();
+    var hour = today.getHours()
+    var minutes = today.getMinutes()
+    var second = today.getSeconds()
+    var milliSecond = today.getMilliseconds()
+    var now = "現在時刻は" + hour + "時" + minutes + "分" + second + "秒です"
+    var Zikoku = document.getElementById("now").innerHTML = now
     //Canvasのオブジェクトの作成
     // var canvas = document.getElementById("canvas-area")
     // var ctx= canvas.getContext('2d');     
