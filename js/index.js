@@ -60,7 +60,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const browserName = navigator.appName;
     const browserVersion = navigator.appVersion;
     const osName = navigator.platform;
-    
+
     console.log("ブラウザ名: " + browserName);
     console.log("ブラウザバージョン: " + browserVersion);
     console.log("OS名: " + osName);
